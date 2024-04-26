@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "flight.h": "c",
+    "stdio.h": "c",
+    "customer.h": "c",
+    "ticket.h": "c",
+    "mystring.h": "c",
+    "string.h": "c",
+    "fileutility.h": "c"
+  }
+}
