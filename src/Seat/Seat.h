@@ -1,23 +1,20 @@
 #ifndef AIRPLANE_SEAT_MANAGEMENT_H
 #define AIRPLANE_SEAT_MANAGEMENT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+typedef struct
+{
+    char number[5];
+    char flightID[30];
+    char status[20];
+} Seat;
 
-#define MAX_SEATS 100
+void addSeat(Seat seats[], int *totalSeats);
+void deleteSeat(Seat seats[], int *totalSeats);
+void changeSeat(Seat seats[]);
+void writeSeatFile(Seat seats[], int totalSeats);
+void readSeatFile(Seat seats[], int *totalSeats);
+void displaySeats(Seat seats[], int totalSeats);
+void menuSeats(Seat seats[], int *totalSeats);
 
-struct Seat {
-    int seatNumber;
-    int flightNumber;
-    int booked;
-};
 
-void saveToFile(struct Seat seats[], int numSeats);
-void loadFromFile(struct Seat seats[], int *numSeats);
-void addSeat(struct Seat seats[], int *numSeats);
-void deleteSeat(struct Seat seats[], int *numSeats);
-void editSeat(struct Seat seats[], int numSeats);
-void displaySeats(struct Seat seats[], int numSeats);
-void menuSeat(struct Seat seats[], int numSeats)
-#endif 
+#endif
