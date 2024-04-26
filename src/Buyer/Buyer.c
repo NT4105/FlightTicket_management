@@ -22,11 +22,11 @@ void addBuyer(Buyer buyer[], int *totalBuyers) {
 
 void displayBuyer(Buyer buyer[], int totalBuyers) {
     for (int i = 0; i < totalBuyers; i++) {
-        printf("     Thong tin cua nguoi mua ve     \n");
-        printf("So CCCD: %s\n", buyer[i].CCCD);
-        printf("Nguoi mua ve: %s\n", buyer[i].name);
-        printf("So sdt: %s\n", buyer[i].sdt);
-        printf("Dia chi mail cua nguoi mua ve: %s\n", buyer[i].mail);
+        printf("======Information of buyer=====\n");
+        printf("CCCD: %s\n", buyer[i].CCCD);
+        printf("Buyer's name: %s\n", buyer[i].name);
+        printf("Buyer's number phone: %s\n", buyer[i].sdt);
+        printf("Buyer's address mail: %s\n", buyer[i].mail);
     }
 }
 
