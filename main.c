@@ -1,25 +1,25 @@
 #include "src\FLight\Flight.h"
 #include "src\Ticket\Ticket.h"
-#include "src\Buyer\Buyer.h"
+#include "src\Customer\Customer.h"
 #include "src\Seat\Seat.h"
 #include <stdio.h>
 #include <windows.h>
 
 #define MAX_FLIGHT 100
 #define MAX_TICKET 100
-#define MAX_BUYER 100
+#define MAX_CUSTOMER 100
 #define MAX_SEAT 100
 
 int main()
 {
     Flight flights[MAX_FLIGHT];
     Ticket tickets[MAX_TICKET];
-    Buyer buyer[MAX_BUYER];
+    Customer customers[MAX_CUSTOMER];
     Seat seats[MAX_SEAT];
 
     int totalFlights = 0;
     int totalTickets = 0;
-    int totalBuyers = 0;
+    int totalCustomers = 0;
     int totalSeats = 0;
 
     int loop = 1;
@@ -29,7 +29,7 @@ int main()
         printf("1. Flights\n");
         printf("2. Tickets\n");
         printf("3. Seats\n");
-        printf("4. Buyers\n");
+        printf("4. Customers\n");
         printf("5. Exit\n\n");
 
         int option;
@@ -49,7 +49,7 @@ int main()
             menuSeats(seats, &totalSeats);
             break;
         case 4:
-            menuBuyers(buyer, &totalBuyers);
+            menuCustomers(customers, &totalCustomers);
             break;
         case 5:
             loop = 0;
